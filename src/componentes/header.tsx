@@ -24,12 +24,12 @@ export default function Navbar() {
   }, [videoIndex]);
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div id="inicio" className="md:w-[100%] md:h-[700px] lg:w-100% relative h-screen overflow-hidden">
       {/* ✅ Video de fondo */}
       <video
         ref={videoRef}
         key={videos[videoIndex]}
-        className="fixed top-0 left-0 w-full object-cover -z-10"
+        className="md:h-full h-full fixed top-0 left-0 w-100% lg:w-full object-cover -z-10"
         src={videos[videoIndex]}
         autoPlay
         muted
@@ -47,8 +47,9 @@ export default function Navbar() {
           {/* Enlaces desktop */}
           <div className="hidden lg:flex space-x-8 font-bold text-lg">
             <Link href="#inicio" className="hover:text-blue-500">Inicio</Link>
-            <Link href="#actividades" className="hover:text-blue-500">Servicios</Link>
+            <Link href="#servicios" className="hover:text-blue-500">Servicios</Link>
             <Link href="#quienes-somos" className="hover:text-blue-500">Quiénes somos</Link>
+            <Link href="#turnos" className="hover:text-blue-500">Turnos</Link>
             <Link href="#contactos" className="hover:text-blue-500">Contactos</Link>
           </div>
 
@@ -74,23 +75,24 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden px-4 py-6 space-y-2 bg-white flex flex-col text-lg">
             <Link href="#inicio" className="hover:text-blue-800">Inicio</Link>
-            <Link href="#actividades" className="hover:text-blue-800">Servicios</Link>
+            <Link href="#servicios" className="hover:text-blue-800">Servicios</Link>
             <Link href="#quienes-somos" className="hover:text-blue-800">¿Quiénes somos?</Link>
+             <Link href="#turnos" className="hover:text-blue-500">Turnos</Link>
             <Link href="#contactos" className="hover:text-blue-800">Contactos</Link>
           </div>
         )}
       </nav>
 
       {/* ✅ Hero principal debajo del navbar */}
-      <div className="relative z-10 flex flex-col items-center justify-start text-center px-4 py-20">
-        <h1 className="font-playfair text-blue-800 bg-white text-6xl p-5 md:mr-[400px]">
+      <div className="md:flex md:flex-col md:justify-center md:items-center md:mt-22 relative z-10 flex flex-col items-center justify-start text-center px-4 py-20">
+        <h1 className="font-playfair text-blue-800 bg-white text-6xl p-5">
           ✨Sonreí con confianza
         </h1>
-        <h2 className="text-blue-800 bg-white p-3 text-xl mt-3 md:mr-[200px]">
+        <h2 className="text-blue-800 bg-white p-3 text-xl mt-3">
           📆 Reservá tu turno y <strong className="font-bold" style={{ textShadow: '2px 6px 10px orange' }}>empezá a sonreír sin límites.</strong>
         </h2>
         <button className="m-6 px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-semibold text-lg rounded-full shadow-lg transition duration-300">
-          Reserva tu turno 🦷
+          <Link href="#turnos">Reserva tu turno 🦷</Link>
         </button>
       </div>
     </div>

@@ -4,10 +4,10 @@ import Script from "next/script";
 
 export default function CalendlyWidget() {
   return (
-    <div className="h-[900px]">
-    <div className="flex flex-col justify-center items-center pt-16">
+    <div id="turnos" className="flex flex-col gap-12 h-[1000px]">
+    <div className="flex flex-col justify-center items-center text-center pt-16">
       
-      <div className="flex w-[400px] items-center mt-[40px] text-center justify-center rounded-lg bg-teal-500"><h2 className="text-xl text-white font-bold p-6">Agenda un turno / consulta</h2></div>
+      <div className="flex w-[400px] items-center md:mt-[0px] md:mb-[30px] lg:mt-[40px] text-center justify-center rounded-lg bg-teal-500"><h2 className="text-xl text-white font-bold p-6">Agenda un turno / consulta</h2></div>
       {/* Calendly Widget */}
          </div>
       <div>
