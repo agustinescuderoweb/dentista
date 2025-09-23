@@ -73,22 +73,22 @@ export default function Navbar() {
 
         {/* ✅ Menú móvil visible sólo cuando isOpen es true */}
         {isOpen && (
-          <div className="lg:hidden px-4 py-6 space-y-2 bg-white flex flex-col text-lg">
+          <div className="lg:hidden px-4 py-6 space-y-2 bg-white flex flex-col text-lg gap-6 justify-center items-center">
             <Link href="#inicio" className="hover:text-blue-800">Inicio</Link>
             <Link href="#servicios" className="hover:text-blue-800">Servicios</Link>
             <Link href="#quienes-somos" className="hover:text-blue-800">¿Quiénes somos?</Link>
-             <Link href="#turnos" className="hover:text-blue-500">Turnos</Link>
+            <Link href="#turnos" className="hover:text-blue-500">Turnos</Link>
             <Link href="#contactos" className="hover:text-blue-800">Contactos</Link>
           </div>
         )}
       </nav>
 
       {/* ✅ Hero principal debajo del navbar */}
-      <div className="md:flex md:flex-col md:justify-center md:items-center md:mt-22 relative z-10 flex flex-col items-center justify-start text-center px-4 py-20">
-        <h1 className="font-playfair text-blue-800 bg-white text-6xl p-5">
-          ✨Sonreí con confianza
+      <div className="md:flex md:flex-col md:justify-center md:items-center relative z-10 flex flex-col items-center justify-start text-center px-4 py-20 gap-6">
+        <h1 className="font-playfair text-blue-800 bg-white lg:text-6xl p-5 text-4xl rounded rounded-lg">
+          ✨<br></br>Sonreí con confianza
         </h1>
-        <h2 className="text-blue-800 bg-white p-3 text-xl mt-3">
+        <h2 className="text-blue-800 bg-white p-3 text-xl mt-3 rounded">
           📆 Reservá tu turno y <strong className="font-bold" style={{ textShadow: '2px 6px 10px orange' }}>empezá a sonreír sin límites.</strong>
         </h2>
         <button className="m-6 px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-semibold text-lg rounded-full shadow-lg transition duration-300">
